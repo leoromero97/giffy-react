@@ -1,18 +1,16 @@
-import './App.css';
-import { useEffect, useState } from 'react';
-import getGifs from './services/getGifs';
-import List from './components/List';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ROUTES } from './constants/routes';
+import HomePage from './pages/home';
+import DetailPage from './pages/detail';
 
 function App() {
-  const [gifs, setGifs] = useState([]);
-
-  useEffect(() => {
-    getGifs({ keyword: 'hulk' }).then((gifs) => setGifs(gifs))
-  }, []);
   return (
-    <section className="App">
-      <List gifs={gifs} />
-    </section>
+    <BrowserRouter>
+      <Routes>
+        <Route path={ROUTES.HOME} Component={HomePage} />
+        <Route path={ROUTES.DETAIL} Component={DetailPage} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

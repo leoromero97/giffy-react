@@ -1,18 +1,30 @@
-function List({ gifs }) {
+import { useEffect, useState } from 'react';
+import GifCard from '../GifCard';
+import getGifs from '../../services/getGifs';
+import './style.css';
+
+export default function List({ keyword }) {
+  const [gifs, setGifs] = useState([]);
+  useEffect(() => {
+    getGifs({ keyword }).then((gifs) => {
+      setGifs(gifs);
+    });
+  }, [keyword]);
+
   return (
-    <div>
-      <ul>
-        {gifs?.map(({id, title, url}) => {
-          return (
-          <li key={id}>
-            <img src={url} alt={title} />
-            <span>{title}</span>
+    <div className="list__container">
+      <ul className="list">
+        {gifs?.map(({ id, title, url }) => (
+          <li key={id} className='list__item'>
+            <GifCard
+              title={title}
+              url={url}
+              id={id}
+            />
           </li>
-          )
-        })}
+        ))
+        }
       </ul>
     </div>
   );
 }
-
-export default List;

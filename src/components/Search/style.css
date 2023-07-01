@@ -1,0 +1,45 @@
+.input__container {
+  display: flex;
+  align-items: center;
+  background-color: #270036;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.input {
+  background: #270036;
+  color: #E49FFF;
+  padding: 4px 16px 4px 24px;
+  border-radius: 40px 0 0 40px;
+  font-size: 18px;
+  line-height: 1.5;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input::placeholder {
+  color: #E49FFF;
+  opacity: 0.6;
+}
+
+.input__button {
+  background-color: #4D006B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 40px 40px 0;
+  padding: 6px;
+  height: 40px;
+  width: 64px;
+}
+
+.input__button:hover {
+  background-color: #4d006bd4;
+}
