@@ -1,16 +1,18 @@
 .card {
   border-radius: 8px;
-  display: flex;
-  width: 100%;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: inline-block;
+/*   width: 100%; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 300px;
+  /* height: 300px; */
+  border: 2px solid wheat;
 }
 
-.card__image {
+.card__link {
   width: 100%;
-  display: none;
 }
 
 .card__text {
@@ -29,3 +31,8 @@
   font-size: 18px;
   line-height: 1.5;
 }
+
+/* .card__image {
+  width: 100%;
+  display: none;
+} */

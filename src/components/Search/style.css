@@ -38,6 +38,7 @@
   padding: 6px;
   height: 40px;
   width: 64px;
+  transition: all ease-in-out .2s;
 }
 
 .input__button:hover {
