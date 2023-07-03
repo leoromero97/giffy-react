@@ -1,0 +1,26 @@
+.list__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60dvh;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+  justify-items: center;
+}
+
+
+.list__container span {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.list__item {
+  width: 100%;
+}
+

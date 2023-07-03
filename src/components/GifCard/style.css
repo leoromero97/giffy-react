@@ -1,0 +1,31 @@
+.card {
+  border-radius: 8px;
+  display: flex;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.card__image {
+  width: 100%;
+  display: none;
+}
+
+.card__text {
+  visibility: hidden;
+}
+
+.card:hover .card__text {
+  visibility: visible;
+  background: #270036d3;
+  width: 100%;
+  height: fit-content;
+  color: #eee;
+  align-self: flex-end;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 1.5;
+}
