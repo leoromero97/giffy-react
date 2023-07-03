@@ -1,16 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ROUTES } from './constants/routes';
-import HomePage from './pages/home';
-import DetailPage from './pages/detail';
+import HomePage from './pages/Home';
+import DetailPage from './pages/Detail';
+import { KeywordValueProvider } from './context/keywordValueContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={ROUTES.HOME} Component={HomePage} />
-        <Route path={ROUTES.DETAIL} Component={DetailPage} />
-      </Routes>
-    </BrowserRouter>
+    <KeywordValueProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path={ROUTES.HOME} Component={HomePage} />
+          <Route path={ROUTES.DETAIL} Component={DetailPage} />
+        </Routes>
+      </BrowserRouter>
+    </KeywordValueProvider>
   );
 }
 
