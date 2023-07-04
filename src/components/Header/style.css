@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 16px;
   width: 100%;
   max-width: 1440px;
 }
@@ -13,11 +13,15 @@
 
 .header__form {
   position: fixed;
-  bottom: 0;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .header__github--container {
-  padding: 12px 32px;
+  padding: 8px 16px;
   background-color: #4D006B;
   display: flex;
   align-items: center;
@@ -32,19 +36,31 @@
   background-color: #4d006bd4;
 }
 
-@media screen and (min-width: 768px) {
+.header__github--container span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
   .header__logo {
     height: 80px;
-  }
-
-  .header__logo--name {
-    display: none;
   }
 
   .header__form {
     position: initial;
     width: 100%;
-    max-width: 664px;
+    flex: 1 1;
+  }
+
+  .header__github--container {
+    flex: 1 1;
+    max-width: fit-content;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__github--container {
+    padding: 12px 32px;
   }
 
   .header__github--container span {

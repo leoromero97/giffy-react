@@ -4,6 +4,8 @@
   background-color: #270036;
   border-radius: 40px;
   overflow: hidden;
+  max-width: 300px;
+  margin-right: 32px;
 }
 
 .input {
@@ -43,4 +45,11 @@
 
 .input__button:hover {
   background-color: #4d006bd4;
+}
+
+@media (min-width: 768px) {
+  .input__container {
+    margin-right: 0;
+    max-width: 664px;
+  }
 }
