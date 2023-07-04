@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { KeywordValueContext } from '../context/keywordValueContext';
 
-export default function useKeywordValue() {
+export function useKeywordValue() {
   const { keyword, setKeyword } = useContext(KeywordValueContext);
-  const keywordValue = keyword.toLowerCase();
+  const keywordValue = keyword.toLowerCase() || 'random';
 
-  return { keywordValue, setKeyword  };
+  return { keywordValue, setKeyword };
 }

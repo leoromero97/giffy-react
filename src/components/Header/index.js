@@ -4,7 +4,7 @@ import Search from '../Search';
 import logo from '../../assets/logo-reagif.svg';
 import icGithub from '../../assets/icGithub-alt.svg';
 import { ROUTES } from '../../constants/routes';
-import useKeywordValue from '../../hooks/useKeywordValue';
+import { useKeywordValue } from '../../hooks/useKeywordValue';
 import './style.css';
 
 export default function Header({ showSearcher = false }) {
@@ -25,7 +25,6 @@ export default function Header({ showSearcher = false }) {
       <Link to={ROUTES.HOME}>
         <img src={logo} alt="Logo Reagif" className="header__logo" />
       </Link>
-      <span className="header__logo--name">Reagif</span>
       {showSearcher && (
         <form onSubmit={handleOnSearch} className="header__form">
           <Search

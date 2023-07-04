@@ -1,13 +1,52 @@
 .card {
+  --gifShadow-size: var(--gridList-gap, 6px);
+  margin-bottom: .5em;
+  position: relative;
+}
+
+.card__link {
+  visibility: visible;
+  background: #270036d3;
+  width: 100%;
+  height: fit-content;
+  color: #eee;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  border-radius: 8px;
+}
+
+.card__text {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #270036d3;
+  width: 100%;
+  height: fit-content;
+  color: #eee;
+  bottom: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.card__image {
+  object-fit: contain;
+  vertical-align: top;
+  width: 100%;
+}
+
+/* 
+.card {
   border-radius: 8px;
   page-break-inside: avoid;
   break-inside: avoid;
   display: inline-block;
-/*   width: 100%; */
+/*   width: 100%; 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* height: 300px; */
+  /* height: 300px;
   border: 2px solid wheat;
 }
 
@@ -21,18 +60,11 @@
 
 .card:hover .card__text {
   visibility: visible;
-  background: #270036d3;
-  width: 100%;
-  height: fit-content;
-  color: #eee;
-  align-self: flex-end;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 18px;
-  line-height: 1.5;
+  
+
 }
 
-/* .card__image {
+.card__image {
   width: 100%;
   display: none;
 } */

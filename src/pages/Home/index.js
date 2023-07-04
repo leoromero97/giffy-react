@@ -1,7 +1,7 @@
 import List from '../../components/List';
 import Header from '../../components/Header';
-import useKeywordValue from '../../hooks/useKeywordValue';
-import useGifs from '../../hooks/useGifs';
+import { useKeywordValue } from '../../hooks/useKeywordValue';
+import { useGifs } from '../../hooks/useGifs';
 import './style.css';
 
 export default function HomePage() {
@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <section className="section__home">
       <Header showSearcher />
-      <h1 className="section__home--title">Reagif</h1>
+      <h1 className="section__home--title">Ultimas busquedas</h1>
       <List gifs={gifs} className="section__home--list" />
     </section>
   );

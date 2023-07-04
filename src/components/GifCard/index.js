@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-/* import './style.css'; */
+import './style.css';
 
 export default function GifCard({ id, title, url }) {
-  /*   const cardStyle = {
+  /*
+     const cardStyle = {
       backgroundImage: `url(${url})`,
     }; */
 
@@ -13,7 +14,5 @@ export default function GifCard({ id, title, url }) {
         <img src={url} alt={title} className='card__image' loading='lazy' />
       </Link>
     </div>
-
   );
 }
-
