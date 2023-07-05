@@ -2,7 +2,6 @@
 
 ## Aplicación de página única (SPA) utilizando la API de Giphy
 
-![cover](https://user-images.githubusercontent.com/57498210/224568863-3549c6c4-9928-4519-9218-6e12653b5761.png)
 
 ### Descripción general
 Aplicación de página única (SPA) utilizando la API de [Giphy](https://developers.giphy.com/) desarrollada principalmente con React JS con fines prácticos para mejorar habilidades de desarrollador frontend.
@@ -41,7 +40,8 @@ $ npm start
 
 
 ### Escritorio
-N/A
+![reagif cover](https://github.com/leoromero97/reagif/assets/57498210/3a480539-83f5-4350-a909-48a42125e4a6)
+
 
 
 ### Contacto / Desarrollador
