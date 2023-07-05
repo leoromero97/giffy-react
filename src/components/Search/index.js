@@ -18,7 +18,7 @@ export default function Search({ placeholder, handleOnChange, onSubmit, value })
       setIcon(icSearch);
     }
   }, [isTrash]);
-  
+
   const handleOnFocus = () => {
     setIsFocus(true);
   };
@@ -27,18 +27,18 @@ export default function Search({ placeholder, handleOnChange, onSubmit, value })
     setIsFocus(false);
   };
 
-/*   const handleOnSubmit = (e) => {
-    e.preventDefault();
-    if (isTrash) {
-      // Comunica el cambio al componente padre si es necesario
-      // Por ejemplo, si el componente padre necesita actualizar el estado del valor
-      // puedes hacer algo como:
-      // setValue('');
-      // handleOnChange('');
-    } else {
-      onSubmit();
-    }
-  }; */
+  /*   const handleOnSubmit = (e) => {
+      e.preventDefault();
+      if (isTrash) {
+        // Comunica el cambio al componente padre si es necesario
+        // Por ejemplo, si el componente padre necesita actualizar el estado del valor
+        // puedes hacer algo como:
+        // setValue('');
+        // handleOnChange('');
+      } else {
+        onSubmit();
+      }
+    }; */
 
   return (
     <div className="input__container">

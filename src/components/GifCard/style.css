@@ -1,7 +1,9 @@
 .card {
   --gifShadow-size: var(--gridList-gap, 6px);
-  margin-bottom: .5em;
+  margin-bottom: 16px;
   position: relative;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .card__link {
@@ -36,35 +38,14 @@
   width: 100%;
 }
 
-/* 
-.card {
-  border-radius: 8px;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  display: inline-block;
-/*   width: 100%; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* height: 300px;
-  border: 2px solid wheat;
+@media (min-width: 768px) {
+  .card {
+    margin-bottom: 24px;
+  }
+
+  .card:hover {
+    scale: 1.2;
+    z-index: 3;
+    box-shadow: -3px 8px 18px 0px var(--color-primary-dark);
+  }
 }
-
-.card__link {
-  width: 100%;
-}
-
-.card__text {
-  visibility: hidden;
-}
-
-.card:hover .card__text {
-  visibility: visible;
-  
-
-}
-
-.card__image {
-  width: 100%;
-  display: none;
-} */
