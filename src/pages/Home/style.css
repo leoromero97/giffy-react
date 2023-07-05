@@ -4,12 +4,12 @@
   flex-direction: column;
   align-items: center;
   padding: 32px 8px;
+  gap: 28px;
 }
 
 .section__home--title {
   font-size: 32px;
   line-height: 1.5;
-  margin-bottom: 24px;
 }
 
 .section__home--container-lists {

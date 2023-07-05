@@ -6,6 +6,7 @@
   overflow: hidden;
   max-width: 300px;
   margin-right: 32px;
+  box-shadow: -3px 8px 18px 0px var(--color-primary-dark);
 }
 
 .input {
@@ -51,5 +52,6 @@
   .input__container {
     margin-right: 0;
     max-width: 664px;
+    box-shadow: none;
   }
 }
