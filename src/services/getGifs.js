@@ -1,7 +1,7 @@
-import { apiKey } from "../constants/api";
+import { API_KEY, API_URL } from "../constants/api";
 
-export default function getGifs({ keyword = 'avengers' } = {}) {
-  const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=20&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
+export default function getGifs({ keyword = 'avengers', limit = 25 } = {}) {
+  const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
 
   return fetch(apiURL)
     .then(res => {

@@ -1,4 +1,5 @@
 export const ROUTES = {
   HOME: '/',
-  DETAIL: '/gif/:id'
+  DETAIL: '/gif/:id',
+  SEARCHER: '/search/:keyword'
 };

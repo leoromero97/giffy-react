@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './style.css';
-import icSearch from '../../assets/search.svg';
-// import icTrash from '../../assets/trash.svg';
+import icSearch from 'assets/search.svg';
+// import icTrash from 'assets/trash.svg';
 
 export default function Search({ placeholder, handleOnChange, onSubmit, value }) {
   const [icon, setIcon] = useState(icSearch);

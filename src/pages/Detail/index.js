@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
-import Header from '../../components/Header';
-import { useFindGif } from '../../hooks/useFindGif';
+import Header from 'components/Header';
+import { useFindGif } from 'hooks/useFindGif';
 import './style.css';
 
 export default function DetailPage() {

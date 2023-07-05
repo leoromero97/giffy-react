@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   padding: 32px 8px;
-
 }
 
 .section__home--title {
@@ -13,9 +12,22 @@
   margin-bottom: 24px;
 }
 
+.section__home--container-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .section__home {
     max-width: 1440px;
     padding: 40px 20px;
+  }
+
+  .section__home--container-lists {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
   }
 }
