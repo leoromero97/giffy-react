@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Search from '../Search';
-import logo from '../../assets/logo-reagif.svg';
-import icGithub from '../../assets/icGithub-alt.svg';
-import { ROUTES } from '../../constants/routes';
-import { useKeywordValue } from '../../hooks/useKeywordValue';
+import Search from 'components/Search';
+import logo from 'assets/logo-reagif.svg';
+import icGithub from 'assets/icGithub-alt.svg';
+import { ROUTES } from 'constants/routes';
+import { useKeywordValue } from 'hooks/useKeywordValue';
 import './style.css';
 
 export default function Header({ showSearcher = false }) {
@@ -39,7 +39,7 @@ export default function Header({ showSearcher = false }) {
         href="https://github.com/leoromero97/giffy-react"
         title="Ir al repositorio"
         target="_blank"
-        className="header__github--container"
+        className="header__github--link"
       >
         <img src={icGithub} alt="Icono GitHub" />
         <span className="header__github--text">Ver repositorio</span>

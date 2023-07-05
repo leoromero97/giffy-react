@@ -1,7 +1,7 @@
 .input__container {
   display: flex;
   align-items: center;
-  background-color: #270036;
+  background-color: var(--color-primary-800);
   border-radius: 40px;
   overflow: hidden;
   max-width: 300px;
@@ -9,8 +9,8 @@
 }
 
 .input {
-  background: #270036;
-  color: #E49FFF;
+  background: var(--color-primary-800);
+  color: var(--color-primary-200);
   padding: 4px 16px 4px 24px;
   border-radius: 40px 0 0 40px;
   font-size: 18px;
@@ -27,12 +27,12 @@
 }
 
 .input::placeholder {
-  color: #E49FFF;
+  color: var(--color-primary-200);
   opacity: 0.6;
 }
 
 .input__button {
-  background-color: #4D006B;
+  background-color: var(--color-primary-700);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@
 }
 
 .input__button:hover {
-  background-color: #4d006bd4;
+  background-color: var(--color-primary-900);
 }
 
 @media (min-width: 768px) {

@@ -6,14 +6,27 @@
   padding: 0;
 }
 
+:root {
+  --color-primary-100: #F1CFFF;
+  --color-primary-200: #E49FFF;
+  --color-primary-300: #D66FFE;
+  --color-primary-400: #C93FFE;
+  --color-primary-500: #BB0FFE;
+  --color-primary-600: #9A01D6;
+  --color-primary-700: #570179;
+  --color-primary-800: #320245;
+  --color-primary-900: #260235;
+  --color-primary-dark: #110117;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: #17021F;
-  color: #F1CFFF;
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-100);
 }
 
 h1,
@@ -117,3 +130,5 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+

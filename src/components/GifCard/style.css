@@ -9,7 +9,7 @@
   background: #270036d3;
   width: 100%;
   height: fit-content;
-  color: #eee;
+  color: var(--color-primary-100);
   text-decoration: none;
   position: relative;
   display: block;
@@ -24,7 +24,7 @@
   background: #270036d3;
   width: 100%;
   height: fit-content;
-  color: #eee;
+  color: var(--color-primary-100);
   bottom: 0;
   margin: 0;
   position: absolute;
