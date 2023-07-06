@@ -19,17 +19,7 @@
 }
 
 .card__text {
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 1.5;
-  background: #270036d3;
-  width: 100%;
-  height: fit-content;
-  color: var(--color-primary-100);
-  bottom: 0;
-  margin: 0;
-  position: absolute;
+  display: none;
 }
 
 .card__image {
@@ -47,5 +37,20 @@
     scale: 1.2;
     z-index: 3;
     box-shadow: -3px 8px 18px 0px var(--color-primary-dark);
+  }
+
+  .card:hover .card__text {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.5;
+    background: #270036d3;
+    width: 100%;
+    height: fit-content;
+    color: var(--color-primary-100);
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    display: flex;
   }
 }

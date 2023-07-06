@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import Header from 'components/Header';
+import Layout from 'components/Layout';
 import { useFindGif } from 'hooks/useFindGif';
 import './style.css';
 
@@ -8,8 +8,7 @@ export default function DetailPage() {
   const { gifId, title, url, keywordValueByGif } = useFindGif({ id });
 
   return (
-    <section className="section__detail">
-      <Header />
+    <Layout>
       <img key={gifId} src={url} width={290} />
       <span>
         El titulo del Gif es: {title}
@@ -17,6 +16,6 @@ export default function DetailPage() {
       <span>
         Buscaste gifs de {keywordValueByGif}
       </span>
-    </section>
+    </Layout>
   );
 }

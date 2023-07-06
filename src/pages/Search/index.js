@@ -1,7 +1,7 @@
+import { useParams } from "react-router-dom";
+import Layout from "components/Layout";
 import List from "components/List";
 import { useGifs } from "hooks/useGifs";
-import { useParams } from "react-router-dom";
-import './style.css'
 
 export default function SearcherPage() {
   const { keyword } = useParams();
@@ -9,9 +9,9 @@ export default function SearcherPage() {
   const { gifs } = useGifs({ keyword: keyword });
 
   return (
-    <div className="section-searcher">
+    <Layout>
       <h1>{title}</h1>
       {gifs && <List gifs={gifs} />}
-    </div>
+    </Layout>
   );
 }
