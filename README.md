@@ -4,7 +4,7 @@
 
 
 ### Descripción general
-Aplicación de página única (SPA) utilizando la API de [Giphy](https://developers.giphy.com/) desarrollada principalmente con React JS con fines prácticos para mejorar habilidades de desarrollador frontend.
+Aplicación de página única (SPA) utilizando la API de [Giphy](https://developers.giphy.com/) desarrollada principalmente con React JS con fines prácticos para mejorar habilidades de desarrollador frontend. Este proyecto fue inspirando en la serie de videos del curso [React Js en Youtube](https://www.youtube.com/watch?v=T_j60n1zgu0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&pp=iAQB) creado por [Midudev](https://midu.dev/)
 
 ### Tecnologías
 - React js
@@ -40,7 +40,8 @@ $ npm start
 
 
 ### Escritorio
-![reagif cover](https://github.com/leoromero97/reagif/assets/57498210/3a480539-83f5-4350-a909-48a42125e4a6)
+![reagif desktop](https://github.com/leoromero97/reagif/assets/57498210/acaaccb6-f3c4-4bc8-817d-e0dc18ee241f)
+
 
 
 
