@@ -15,7 +15,7 @@ export default function HomePage() {
   }
 
   return (
-    <Layout>
+    <Layout showSearcher>
       <h1 className="section__home--title">Últimas búsquedas</h1>
       <div className="section__home--container-lists">
         <List gifs={gifs} className="section__home--list" />

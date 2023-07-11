@@ -9,7 +9,7 @@ export default function SearcherPage() {
   const { gifs } = useGifs({ keyword: keyword });
 
   return (
-    <Layout>
+    <Layout showSearcher>
       <h1>{title}</h1>
       {gifs && <List gifs={gifs} />}
     </Layout>
