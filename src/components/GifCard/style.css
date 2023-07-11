@@ -1,6 +1,5 @@
 .card {
   --gifShadow-size: var(--gridList-gap, 6px);
-  margin-bottom: 16px;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
@@ -11,6 +10,7 @@
   background: #270036d3;
   width: 100%;
   height: fit-content;
+  max-height: 260px;
   color: var(--color-primary-100);
   text-decoration: none;
   position: relative;
@@ -29,10 +29,6 @@
 }
 
 @media (min-width: 768px) {
-  .card {
-    margin-bottom: 24px;
-  }
-
   .card:hover {
     scale: 1.2;
     z-index: 3;

@@ -1,21 +1,20 @@
-:root {
-  --results-columns: 2;
-}
-
 .list {
-  column-count: var(--results-columns);
-  column-gap: 24px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   min-height: 100vh;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
-  :root {
-    --results-columns: 3;
+  .list {
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 1024px) {
-  :root {
-    --results-columns: 4;
+  .list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

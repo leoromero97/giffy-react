@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 32px;
   padding: 32px 8px;
+  padding-bottom: 140px;
   width: 100%;
 }
 
