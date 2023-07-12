@@ -1,18 +1,23 @@
+import { useCallback, useEffect, useRef } from 'react';
+import debounce from 'just-debounce-it';
 import Layout from 'components/Layout';
 import List from 'components/List';
 import LazyTrending from 'components/LazyTrendingSearches';
-import Paginator from 'components/Paginator';
 import { useGifs } from 'hooks/useGifs';
 import { useKeywordValue } from 'hooks/useKeywordValue';
+import { useIntersectionNearScreen } from 'hooks/useNearScreen';
 import './style.css';
 
 export default function HomePage() {
+  const externalRef = useRef();
   const { keywordValue } = useKeywordValue();
-  const { gifs, setPage } = useGifs({ keyword: keywordValue });
+  const { gifs, loading, setPage } = useGifs({ keyword: keywordValue });
+  const { isNearScreen } = useIntersectionNearScreen({ externalRef: loading ? null : externalRef, isOnced: false });
+  const debounceRefNextPage = useCallback(debounce(() => setPage(prevPage => prevPage + 1), 500), []);
 
-  const handleNextPage = () => {
-    setPage(prevPage => prevPage + 1);
-  }
+  useEffect(() => {
+    if (isNearScreen) debounceRefNextPage();
+  }, [isNearScreen, debounceRefNextPage]);
 
   return (
     <Layout showSearcher>
@@ -21,10 +26,7 @@ export default function HomePage() {
         <List gifs={gifs} className="section__home--list" />
         <LazyTrending />
       </div>
-      <Paginator
-        onNextPage={handleNextPage}
-        nextText="Ver siguientes gifs"
-      />
+      <div id="endVisor" ref={externalRef}></div>
     </Layout>
   );
 }
