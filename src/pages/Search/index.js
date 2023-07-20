@@ -19,7 +19,7 @@ export default function SearcherPage() {
   }, [isNearScreen, debounceRefNextPage]);
 
   return (
-    <Layout showSearcher>
+    <Layout>
       <h1>{title}</h1>
       {gifs && <List gifs={gifs} />}
       <div id="endVisor" ref={externalRef}></div>
