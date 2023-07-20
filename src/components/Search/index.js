@@ -1,59 +1,37 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './style.css';
 import icSearch from 'assets/search.svg';
-// import icTrash from 'assets/trash.svg';
+import { useKeywordValue } from 'hooks/useKeywordValue';
 
-export default function Search({ placeholder, handleOnChange, onSubmit, value }) {
-  const [icon, setIcon] = useState(icSearch);
-  const [isFocus, setIsFocus] = useState(false);
+export default function Search({
+  placeholder
+}) {
+  const { setKeyword } = useKeywordValue();
+  const [searchValue, setSearchValue] = useState('');
 
-  const hasValue = value !== '';
-  const isTrash = hasValue && isFocus;
+  const handleOnChange = (e) => {
+    setSearchValue(e.target.value);
+  }
 
-  useEffect(() => {
-    if (isTrash) {
-      // cambiar por icTRash
-      setIcon(icSearch);
-    } else {
-      setIcon(icSearch);
-    }
-  }, [isTrash]);
-
-  const handleOnFocus = () => {
-    setIsFocus(true);
-  };
-
-  const handleOnBlur = () => {
-    setIsFocus(false);
-  };
-
-  /*   const handleOnSubmit = (e) => {
-      e.preventDefault();
-      if (isTrash) {
-        // Comunica el cambio al componente padre si es necesario
-        // Por ejemplo, si el componente padre necesita actualizar el estado del valor
-        // puedes hacer algo como:
-        // setValue('');
-        // handleOnChange('');
-      } else {
-        onSubmit();
-      }
-    }; */
+  const handleOnSearch = (e) => {
+    e.preventDefault();
+    setKeyword(searchValue);
+  }
 
   return (
-    <div className="input__container">
-      <input
-        type="search"
-        placeholder={placeholder}
-        onChange={handleOnChange}
-        className="input"
-        value={value}
-        onFocus={handleOnFocus}
-        onBlur={handleOnBlur}
-      />
-      <button className="input__button" onClick={onSubmit}>
-        <img src={icon} height={20} width={20} />
-      </button>
-    </div>
+    <form onSubmit={handleOnSearch} className="header__form">
+      <div className="input__container">
+        <input
+          type="search"
+          placeholder={placeholder}
+          onChange={handleOnChange}
+          className="input"
+          value={searchValue}
+        />
+        <button className="input__button">
+          <img src={icSearch} height={20} width={20} />
+        </button>
+      </div>
+    </form>
   );
 }

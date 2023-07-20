@@ -1,7 +1,8 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-export default function GifCard({ id, title, url }) {
+function GifCard({ id, title, url }) {
   return (
     <div className="card">
       <Link to={`/gif/${id}`} className="card__link" title={title}>
@@ -11,3 +12,5 @@ export default function GifCard({ id, title, url }) {
     </div>
   );
 }
+
+export default React.memo(GifCard);
